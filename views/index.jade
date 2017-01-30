@@ -2,14 +2,9 @@ extends layout
 
 block content
   div(class="jumbotron")
-    h1= title
-    p Welcome to #{title}
-  table(class="table")
-    thead
-      tr
-        th Splits
-        th Time
-    tbody
-      tr
-        td 1-1
-        td +0.5
+    p(id="timerDisplay") 00:00:00.00
+    button(type="button" onclick ="startTimer()") Start
+    button(type="button" onClick ="stopTimer()") End
+
+block script
+  script(src='/javascripts/timer.js')
